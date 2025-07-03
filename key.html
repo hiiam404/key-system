@@ -98,7 +98,7 @@
         <button class="copy-btn" onclick="copyKey()">Copy Key</button>
         <div class="copied-msg" id="copiedMsg">Key copied!</div>
     </div>
-    <script>
+       <script>
     function gerarKeyWave() {
         // Gera uma key no formato XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
         const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -113,7 +113,13 @@
     }
 
     window.onload = function() {
-        document.getElementById('keyValue').innerText = gerarKeyWave();
+        // Verifica se já existe uma key salva
+        let key = localStorage.getItem('waveKey');
+        if (!key) {
+            key = gerarKeyWave();
+            localStorage.setItem('waveKey', key);
+        }
+        document.getElementById('keyValue').innerText = key;
     };
 
     function copyKey() {
