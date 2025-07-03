@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bem-vindo</title>
+    <title>Your Wave Reward</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: #18181c;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .wave-container {
+            text-align: center;
+            color: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .wave-title {
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 0.1em;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+        .wave-underline {
+            width: 120px;
+            height: 12px;
+            margin: 0 auto 18px auto;
+            background: url('data:image/svg+xml;utf8,<svg width="120" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M5 7 Q 30 2 60 7 T 115 7" stroke="%2300bfff" stroke-width="4" fill="none" stroke-linecap="round"/></svg>') no-repeat center;
+        }
+        .wave-desc {
+            font-size: 1.18em;
+            color: #bdbdbd;
+            margin-bottom: 32px;
+        }
+        .enter-btn {
+            background: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 44px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #0005;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .enter-btn:hover {
+            background: #0099cc;
+            transform: scale(1.04);
+        }
+    </style>
 </head>
 <body>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; margin-top: 80px;">
+    <div class="wave-container">
+        <div class="wave-title">Your<br>Wave Reward</div>
+        <div class="wave-underline"></div>
+        <div class="wave-desc">
+            Click the button below to access the site and get your reward!
+        </div>
         <button class="enter-btn" onclick="window.location.href='https://work.ink/21dX/helllbf%20nahhhhh#google_vignette'">Ir para o site</button>
     </div>
 </body>
