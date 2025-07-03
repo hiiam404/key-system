@@ -1,0 +1,57 @@
+body {
+    background: #181818;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: #232323;
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #0008;
+    text-align: center;
+    width: 350px;
+}
+button {
+    background: #00c853;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #009624;
+}
+input[type="text"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 80%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#download-link {
+    display: inline-block;
+    margin-top: 16px;
+    background: #1976d2;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#download-link:hover {
+    background: #0d47a1;
+}
