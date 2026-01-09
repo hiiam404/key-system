@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your License Key</title>
+    <style>
+        body {
+            background: #0f0f12;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
+        }
+        .card {
+            background: #16161e;
+            border: 2px solid #7b2cbf;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+        }
+        h2 { color: #c77dff; margin-bottom: 10px; }
+        .key-display {
+            background: #0a0a0c;
+            color: #c77dff;
+            border: 1px dashed #7b2cbf;
+            padding: 20px;
+            font-family: monospace;
+            font-size: 1.2em;
+            margin: 20px 0;
+            border-radius: 10px;
+            word-break: break-all;
+        }
+        .copy-btn {
+            background: #7b2cbf;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .copy-btn:hover { background: #9d4edd; }
+        #msg { color: #00ff7f; margin-top: 15px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>License Unlocked</h2>
+        <p>Your 24-hour key is ready. Copy and paste it into the executor.</p>
+        <div class="key-display" id="keyText"></div>
+        <button class="copy-btn" onclick="copyKey()">Copy Key</button>
+        <p id="msg">Copied to clipboard!</p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const date = new Date();
+            // This matches the C# logic: Amethyst_DayMonth_Key
+            const key = "Amethyst_" + date.getDate() + (date.getMonth() + 1) + "_Key";
+            document.getElementById('keyText').innerText = key;
+        };
+
+        function copyKey() {
+            const text = document.getElementById('keyText').innerText;
+            navigator.clipboard.writeText(text);
+            document.getElementById('msg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
